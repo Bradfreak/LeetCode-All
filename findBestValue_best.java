@@ -16,14 +16,20 @@ class Solution {
         int diff = sum(sp), diff1;
         while(true){
             sp1 = sp;
-            if(diff >= 0){sp1--;}
-            else{sp1++;}
+            if(diff >= 0){
+                sp1--;
+            }
+            else{
+                sp1++;
+            }
             diff1 = sum(sp1);
             if(Math.abs(diff1) < Math.abs(diff)){
                 sp = sp1;
                 diff = diff1;
             }
-            else{break;}
+            else{
+                break;
+            }
         }
         return sp;
     }
